@@ -21,6 +21,7 @@ function createWindow(width, height, event) {
     height,
     webPreferences: {
       nodeIntegration: true,
+      webSecurity: false
     },
     frame: true,
   });
@@ -50,7 +51,7 @@ function createWindow(width, height, event) {
 }
 
 app.on('ready', () => {
-  createWindow(300, 420);
+  createWindow(400, 600);
 });
 
 // Quit when all windows are closed.
@@ -61,7 +62,7 @@ app.on('window-all-closed', function() {
 app.on('activate', function() {
   if (mainWindow === null) {
     () => {
-      createWindow(300, 420);
+      createWindow(400, 600);
     };
   }
 });
